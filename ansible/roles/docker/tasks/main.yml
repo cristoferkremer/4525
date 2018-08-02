@@ -1,0 +1,10 @@
+---
+# tasks file for docker
+- name: instalar pacotes pre-requisito ao Docker
+  include: pre_reqs.yaml
+
+- name: instalar repositorios do Puppet
+  include: repos.yaml
+
+- name: instalar o Docker
+  include: instalar.yaml

@@ -1,0 +1,9 @@
+---
+- name: Distribuir arquivo resolv.conf
+  hosts: automation docker
+  tasks:
+   - name: Copiando um arquivo resolv.conf
+     copy:
+      src: /etc/resolv.conf
+      dest: /etc/resolv.conf
+

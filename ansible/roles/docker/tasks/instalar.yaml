@@ -1,0 +1,6 @@
+
+- name: instalando o Docker
+  apt:
+   name: docker-ce
+   update_cache: yes
+   state: present

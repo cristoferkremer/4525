@@ -1,0 +1,7 @@
+---
+
+- name: executar a role Puppet
+  hosts: all
+  roles:
+   - puppet
+

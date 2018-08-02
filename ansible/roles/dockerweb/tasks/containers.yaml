@@ -1,0 +1,24 @@
+
+- name: criando o volume persistente
+  docker_volume:
+   name: index
+
+- name: criando o container1
+  docker_container:
+   name: dockerweb1
+   image: httpd
+   state: started
+   volumes:
+    - index:/usr/local/apache2/htdocs
+   ports:
+    - 8080:80
+
+- name: criando o container2
+  docker_container:
+   name: dockerweb2
+   image: httpd
+   state: started
+   volumes:
+    - index:/usr/local/apache2/htdocs
+   ports:
+    - 8081:80

@@ -1,0 +1,9 @@
+---
+# tasks file for web
+
+- name: chamando a playbook instalar
+  include: instalar.yaml
+
+- name: chamando a playbook do arquivo
+  include: arquivo.yaml
+

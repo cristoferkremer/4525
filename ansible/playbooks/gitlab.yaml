@@ -1,0 +1,24 @@
+---
+
+- name: instalando o gitlab
+  hosts: devops
+  tasks:
+   - name: instalando debs
+     apt:
+      name: "{{ item }}"
+      update_cache: yes
+     with_items:
+      - curl
+      - openssh-server
+      - ca-certificates
+      - postfix
+
+   - name: executando o  do repositorio gitlab
+     shell: " curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/.deb.sh | sudo bash "
+   - name: adicionando a variavel da url
+     command: " EXTERNAL_URL='http://devops.dexter.com.br' "
+
+   - name: instalando o gitlab
+     apt:
+      name: gitlab-ce
+      update_cache: yes

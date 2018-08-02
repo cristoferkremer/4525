@@ -1,0 +1,17 @@
+---
+
+- name: Instalando o pacotes em maquinas debian
+  hosts: all
+  tasks:
+   - name: instalando um pacote
+     apt:
+      name: "{{ item }}"
+      update_cache: yes
+      state: present
+     with_items:
+      - vim
+      - nano
+      - sl
+      - ccze
+      - dnsutils
+

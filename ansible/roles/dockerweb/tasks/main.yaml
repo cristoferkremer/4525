@@ -1,0 +1,7 @@
+---
+
+- name: cria os containers
+  include: containers.yaml
+
+- name: cria e escreve o arquivo index.html
+  include: arquivo.yaml

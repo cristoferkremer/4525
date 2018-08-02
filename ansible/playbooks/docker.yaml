@@ -1,0 +1,6 @@
+---
+
+- name: chamador da role de instalacao do Docker
+  hosts: docker
+  roles:
+   - docker

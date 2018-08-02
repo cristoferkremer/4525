@@ -1,0 +1,11 @@
+- name: criando o arquivo index.html
+  file:
+   path: /var/lib/docker/volumes/index/_data/index.html
+   state: touch
+
+- name: escrevendo no arquivo index.html
+  blockinfile:
+   path: /var/lib/docker/volumes/index/_data/index.html
+   block: |
+    criei um index com o ansible
+    Gremio rumo ao Mundial !!!

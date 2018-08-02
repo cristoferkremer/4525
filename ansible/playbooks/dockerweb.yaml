@@ -1,0 +1,6 @@
+---
+
+- name: cria dois containers web e inicia o apache com arquivo index.html persistente
+  hosts: docker
+  roles:
+   - dockerweb
